@@ -25,23 +25,7 @@
     data() {
       return {
         newUser: {},
-        users:[
-          {
-          name: 'John Doe',
-          email: 'jdoe@gmail.com',
-          contacted: false
-          },
-          {
-          name: 'Steve Smith',
-          email: 'ssmith@gmail.com',
-          contacted: false
-          },
-          {
-          name: 'Tom White',
-          email: 'twhite@gmail.com',
-          contacted: false
-          },
-        ]
+        users:[]
       }
     },
     methods: {
@@ -58,6 +42,12 @@
         this.users.splice(this.users.indexOf(user), 1);
       }
     },
+    created: function(){
+      this.$http.get('https://jsonplaceholder.typicode.com/users')
+      .then(function(response){
+        this.users = response.data;
+      })
+    }
   }
 </script>
 
