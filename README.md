@@ -1,6 +1,18 @@
 # vueapp
 
-> A Vue.js project
+> A Vue.js project  
+Covers all of the fundamentals of the Vue.js 2.0 JavaScript framework  
+Vue-cli  
+Declarative Rendering 
+Directives  
+Conditionals & Loops  
+Events & Input  
+Templates  
+Components  
+Properties  
+vue-router  
+vue-resource  
+  
 
 ## Build Setup
 
